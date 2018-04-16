@@ -1,0 +1,38 @@
+{
+  "name": "react-native-whc-calendar",
+  "version": "1.0.5",
+  "description": "A react native module to calendar component, it works on iOS and Android.",
+  "main": "calendar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netyouli/react-native-whc-calendar.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "react-native-calendar",
+    "react-native-whc-calendar",
+    "calendar",
+    "calendar-ios",
+    "calendar-android",
+    "react-component",
+    "ios",
+    "android"
+  ],
+  "author": "netyouli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/netyouli/react-native-whc-calendar/issues"
+  },
+  "peerDependencies": {
+    "react-native": "^0.47.0",
+    "prop-types": "^15.5.7"
+  },
+  "homepage": "https://github.com/netyouli/react-native-whc-calendar#readme",
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  }
+}
