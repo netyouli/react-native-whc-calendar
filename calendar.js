@@ -309,11 +309,13 @@ export default class Calendar extends Component {
                     onPress={(it) => {
                         const {
                             invalidDateNotSelected,
+                            onSelectedDateBlock = null,
+                            enableSingleChoice = false,
                         } = this.props;
                         const {
                             sections = [],
                         } = this.state;
-                        if (!this.startDate || (this.startDate && this.endDate)) {
+                        if (!this.startDate || (this.startDate && this.endDate) || enableSingleChoice) {
                             this.startDate = it;
                             this.endDate = null;
                             const {
@@ -329,10 +331,6 @@ export default class Calendar extends Component {
                                     dv.isLessToday = invalidDateNotSelected ? tmpStartDate > tmpdate : false;
                                 });
                             });
-                            const {
-                                onSelectedDateBlock = null,
-                                enableSingleChoice = false,
-                            } = this.props;
                             if (enableSingleChoice) {
                                 onSelectedDateBlock && onSelectedDateBlock(startDate.year + '-' + startDate.month + '-' + startDate.day, null);
                             }
@@ -354,9 +352,6 @@ export default class Calendar extends Component {
                                     dv.isLessToday = invalidDateNotSelected ? nowDateStr > tmpdate : false;
                                 });
                             });
-                            const {
-                                onSelectedDateBlock = null,
-                            } = this.props;
                             onSelectedDateBlock && onSelectedDateBlock(startDate.year + '-' + startDate.month + '-' + startDate.day,
                                 endDate.year + '-' + endDate.month + '-' + endDate.day);
                         }
