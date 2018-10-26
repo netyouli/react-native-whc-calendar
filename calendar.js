@@ -214,25 +214,6 @@ export default class Calendar extends Component {
         });
     }
 
-    componentWillUnmount() {
-        this.timer && clearTimeout(this.timer);
-    }
-
-    /**
-     * 创建按钮
-     * @returns {*}
-     * @private
-     */
-    _createButton(style, text, onPress) {
-        return (
-            <TouchableHighlight style={style}
-                                underlayColor={'transparency'}
-                                onPress={onPress}>
-                <Text>{text}</Text>
-            </TouchableHighlight>
-        );
-    }
-
     /**
      * 创建周头部
      * @returns {*}
